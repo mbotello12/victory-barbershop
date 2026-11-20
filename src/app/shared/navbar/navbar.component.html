@@ -1,0 +1,42 @@
+
+<header class="site-header">
+  <nav class="navbar container" aria-label="Main navigation">
+
+    <a routerLink="/" class="brand" aria-label="Victory Barbershop home">
+      <img
+        src="/images/victory-logo.jpeg"
+        alt="Victory Barbershop"
+      />
+    </a>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      [attr.aria-expanded]="menuOpen"
+      aria-label="Toggle navigation"
+      (click)="menuOpen = !menuOpen"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="nav-links" [class.open]="menuOpen">
+      <a routerLink="/"  (click)="closeMenu()">Home</a>
+      <a routerLink="/services"  (click)="closeMenu()">Services</a>
+      <a routerLink="/our-barbers"  (click)="closeMenu()">Barbers</a>
+      <a routerLink="/join-our-team" (click)="closeMenu()">Join Our Team</a>
+      
+
+      <a
+        href="https://victorybarber.setmore.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="nav-book"
+      >
+        Book Now
+      </a>
+    </div>
+
+  </nav>
+</header>

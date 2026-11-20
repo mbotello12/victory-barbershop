@@ -1,0 +1,108 @@
+<section class="our-barbers-page">
+
+  <!-- Page Hero -->
+  <header class="barbers-hero">
+    <div class="barbers-hero-overlay"></div>
+
+    <div class="container barbers-hero-content">
+      <span class="eyebrow">THE PEOPLE BEHIND THE CRAFT</span>
+
+      <h1>MEET OUR <span>BARBERS</span></h1>
+
+      <div class="hero-accent"></div>
+
+      <p>
+        A great barbershop is built on the people behind the chair.
+        Get to know the team bringing skill, personality, and
+        craftsmanship to every appointment.
+      </p>
+    </div>
+  </header>
+
+  <!-- Barber Profiles -->
+  <section class="barbers-list">
+    @for (barber of barbers; track barber.id; let i = $index) {
+      <article
+        class="barber-profile"
+        [class.reverse]="i % 2 !== 0"
+      >
+        <div class="container barber-container">
+
+          <div class="barber-image">
+            <img
+              [src]="barber.image"
+              [alt]="barber.imageAlt"
+            />
+            <span class="barber-number">
+              {{ (i + 1).toString().padStart(2, '0') }}
+            </span>
+          </div>
+
+          <div class="barber-content">
+            <span class="barber-eyebrow">
+              MEET YOUR BARBER
+            </span>
+
+            <h2>{{ barber.name }}</h2>
+
+            <span class="barber-experience">
+              {{ barber.experience }}
+            </span>
+
+            <div class="barber-bio">
+                <p class="barber-bio-text">{{ barber.bio }}</p>
+            </div>
+            
+
+            <div class="specialties">
+              <h3>Specialties</h3>
+
+              <div class="specialty-list">
+                @for (specialty of barber.specialties; track specialty) {
+                  <span class="specialty-tag">
+                    {{ specialty }}
+                  </span>
+                }
+              </div>
+            </div>
+
+            <a
+              [href]="barber.bookingUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="barber-button"
+            >
+              Book with {{ barber.name }}
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+        </div>
+      </article>
+    }
+  </section>
+
+  <!-- Closing CTA -->
+  <section class="barbers-cta">
+    <div class="container">
+      <span class="eyebrow">YOUR NEXT GREAT CUT STARTS HERE</span>
+
+      <h2>FIND YOUR <span>BARBER.</span></h2>
+
+      <p>
+        Whether you're visiting for the first time or coming
+        back to your favorite chair, we're ready to welcome you.
+      </p>
+
+      <a
+        href="https://victorybarber.setmore.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="cta-button"
+      >
+        Book Your Appointment <span>→</span>
+      </a>
+    </div>
+  </section>
+
+</section>

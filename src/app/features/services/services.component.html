@@ -1,0 +1,63 @@
+<section class="services section" id="services">
+  <div class="container">
+
+    <div class="section-heading">
+      <span class="eyebrow">WHAT WE DO</span>
+      <h2>The Victory Experience</h2>
+      <p>
+        Quality cuts. Traditional craft. Attention to every detail.
+      </p>
+    </div>
+
+    <div class="services-list">
+      @for (service of services; track service.id; let i = $index) {
+        <article
+          class="service-row"
+          [class.reverse]="i % 2 !== 0"
+        >
+
+          <div class="service-image">
+            <img
+              [src]="service.image"
+              [alt]="service.imageAlt"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="service-content">
+
+            <span class="service-number">
+              0{{ i + 1 }} / VICTORY SERVICES
+            </span>
+
+            <h3>{{ service.name }}</h3>
+
+            <p>{{ service.description }}</p>
+
+            <ul class="service-highlights">
+              @for (highlight of service.highlights; track highlight) {
+                <li>
+                  <span aria-hidden="true">✦</span>
+                  {{ highlight }}
+                </li>
+              }
+            </ul>
+
+            <a
+              class="service-button"
+              [href]="bookingUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Book Your Appointment
+              <span aria-hidden="true">→</span>
+            </a>
+
+          </div>
+
+        </article>
+      }
+    </div>
+
+  </div>
+</section>

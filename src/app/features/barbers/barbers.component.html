@@ -1,0 +1,59 @@
+<section class="barbers section" id="barbers">
+  <div class="container">
+
+    <div class="section-heading">
+      <span class="eyebrow">THE TEAM</span>
+      <h2>Meet Your Barbers</h2>
+      <p>
+        Skilled hands. Individual styles. One standard of quality.
+        Find the barber who's right for you.
+      </p>
+    </div>
+
+    <div class="barbers-grid">
+      @for (barber of barbers; track barber.id) {
+        <article class="barber-card">
+
+          <div class="barber-image">
+            <img
+              [src]="barber.image"
+              [alt]="barber.imageAlt"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="barber-content">
+            <span class="barber-experience">
+              {{ barber.experience }}
+            </span>
+
+            <h3>{{ barber.name }}</h3>
+            
+            <div class="barber-bio">
+                <p class="barber-bio-text">{{ barber.bio }}</p>
+            </div>
+            
+
+            <div class="specialties">
+              @for (specialty of barber.specialties; track specialty) {
+                <span class="specialty">{{ specialty }}</span>
+              }
+            </div>
+
+            <a
+              class="booking-button"
+              [href]="barber.bookingUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Book with {{ barber.name }}
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+        </article>
+      }
+    </div>
+
+  </div>
+</section>

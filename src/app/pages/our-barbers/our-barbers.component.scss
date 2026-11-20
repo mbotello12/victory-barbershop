@@ -1,0 +1,349 @@
+
+.our-barbers-page {
+  background: var(--bg-primary);
+}
+
+/* PAGE HERO */
+
+.barbers-hero {
+  position: relative;
+  min-height: 370px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      rgba(8, 9, 12, 0.82),
+      rgba(8, 9, 12, 0.88)
+    ),
+    url('/images/victory-barber-bg.png') center 45% / cover no-repeat;
+}
+
+.barbers-hero-content {
+  position: relative;
+  z-index: 1;
+  padding-top: 75px;
+  padding-bottom: 75px;
+  text-align: center;
+}
+
+.eyebrow,
+.barber-eyebrow {
+  color: var(--color-gold);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+}
+
+.barbers-hero h1 {
+  margin-top: 15px;
+  color: #fff;
+  font-size: clamp(3rem, 7vw, 5rem);
+  font-weight: 900;
+  line-height: 1;
+
+  span {
+    color: var(--color-gold);
+  }
+}
+
+.hero-accent {
+  width: 85px;
+  height: 3px;
+  margin: 25px auto;
+  background: linear-gradient(
+    90deg,
+    var(--color-red) 0 33.33%,
+    var(--color-gold) 33.33% 66.66%,
+    var(--color-blue) 66.66% 100%
+  );
+}
+
+.barbers-hero p {
+  max-width: 650px;
+  margin: 0 auto;
+  color: #d5d5d2;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+/* BARBER PROFILES */
+
+.barber-profile {
+  padding: 95px 0;
+  background: var(--bg-primary);
+
+  &:nth-child(even) {
+    background: var(--color-blue);
+  }
+}
+
+.barber-container {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  gap: 80px;
+}
+
+.barber-profile.reverse .barber-image {
+  order: 2;
+}
+
+.barber-profile.reverse .barber-content {
+  order: 1;
+}
+
+/* PORTRAITS */
+
+.barber-image {
+  position: relative;
+  min-width: 0;
+
+  img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 4px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.barber-number {
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 75px;
+  height: 75px;
+  background: var(--color-navy);
+  border: 2px solid var(--color-gold);
+  color: var(--color-gold);
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.barber-profile.reverse .barber-number {
+  left: auto;
+  right: -20px;
+}
+
+/* BARBER INFORMATION */
+
+.barber-content {
+  max-width: 560px;
+}
+
+.barber-content h2 {
+  margin-top: 14px;
+  color: #fff;
+  font-size: clamp(2.5rem, 4vw, 3.6rem);
+  font-weight: 900;
+  line-height: 1.05;
+}
+
+.barber-experience {
+  display: inline-block;
+  margin-top: 14px;
+  color: var(--color-gold);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.barber-bio-text {
+  margin-top: 24px;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+.barber-bio {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 18px 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('/images/victory-v-logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 90%;
+    opacity: 0.16;
+    z-index: -1;
+    pointer-events: none;
+  }
+  p {
+    position: relative;
+    color: #f5f5f5;
+    line-height: 1.8;
+  }
+}
+
+
+/* SPECIALTIES */
+
+.specialties {
+  margin-top: 30px;
+
+  h3 {
+    margin-bottom: 15px;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+}
+
+.specialty-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.specialty-tag {
+  padding: 8px 13px;
+  background: rgba(23, 74, 155, 0.2);
+  border: 1px solid rgba(23, 74, 155, 0.65);
+  border-radius: 2px;
+  color: #d5d5d2;
+  font-size: 0.8rem;
+}
+
+/* BOOKING BUTTON */
+
+.barber-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 32px;
+  padding: 14px 22px;
+  background: transparent;
+  border: 1px solid var(--color-gold);
+  color: var(--color-gold);
+  font-size: 0.82rem;
+  font-weight: 800;
+  transition: all 0.25s ease;
+
+  &:hover {
+    background: var(--color-gold);
+    color: var(--color-black);
+  }
+}
+
+/* CLOSING CTA */
+
+.barbers-cta {
+  padding: 100px 0;
+  background:
+    linear-gradient(
+      rgba(10, 32, 85, 0.94),
+      rgba(10, 32, 85, 0.96)
+    ),
+    url('/images/victory-barber-bg.png') center / cover no-repeat;
+  text-align: center;
+
+  h2 {
+    margin-top: 18px;
+    color: #fff;
+    font-size: clamp(2.3rem, 5vw, 4rem);
+    font-weight: 900;
+
+    span {
+      color: var(--color-gold);
+    }
+  }
+
+  p {
+    max-width: 600px;
+    margin: 20px auto 30px;
+    color: #d5d5d2;
+    line-height: 1.8;
+  }
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 26px;
+  background: var(--color-gold);
+  border: 1px solid var(--color-gold);
+  color: var(--color-black);
+  font-size: 0.85rem;
+  font-weight: 800;
+  transition: all 0.25s ease;
+
+  &:hover {
+    background: transparent;
+    color: var(--color-gold);
+  }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+  .barber-container {
+    gap: 45px;
+  }
+
+  .barber-image img {
+    height: 420px;
+  }
+}
+
+@media (max-width: 700px) {
+  .barbers-hero {
+    min-height: 330px;
+  }
+
+  .barber-profile {
+    padding: 65px 0;
+  }
+
+  .barber-container {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .barber-profile.reverse .barber-image,
+  .barber-profile.reverse .barber-content {
+    order: initial;
+  }
+
+  .barber-image img {
+    height: 380px;
+  }
+
+  .barber-number {
+    left: -8px;
+    bottom: -12px;
+    width: 60px;
+    height: 60px;
+    font-size: 1.1rem;
+  }
+
+  .barber-profile.reverse .barber-number {
+    right: -8px;
+    left: auto;
+  }
+
+  .barber-content {
+    max-width: none;
+  }
+
+  .barbers-cta {
+    padding: 75px 0;
+  }
+  .barber-bio::before{
+    background-size: auto;
+  }
+}

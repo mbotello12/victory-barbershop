@@ -1,1 +1,64 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  // Brand colors
+  --color-black: #08090c;
+  --color-navy: #0a2055;
+  --color-gold: #d6a84b;
+  --color-silver: #d5d5d2;
+  --color-red: #c52232;
+  --color-blue: #174a9b;
+
+  // Backgrounds
+  --bg-primary: #08090c;
+  --bg-secondary: #101319;
+  --bg-card: #171b23;
+
+  // Text
+  --text-primary: #f5f5f5;
+  --text-secondary: #a9adb5;
+
+  // Borders
+  --border-color: rgba(214, 168, 75, 0.25);
+
+  // Layout
+  --container-width: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  width: min(100% - 40px, var(--container-width));
+  margin-inline: auto;
+}
+
+.section {
+  padding: 90px 0;
+}
