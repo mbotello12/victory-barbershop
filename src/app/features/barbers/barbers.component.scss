@@ -39,13 +39,13 @@
   flex-direction: column;
   overflow: hidden;
   background: #174a9b;
-  border: 1px solid var(--color-gold);
+  border: 2px solid var(--color-red);
   border-radius: 8px;
   transition: transform 0.25s ease, border-color 0.25s ease;
 
   &:hover {
     transform: translateY(-6px);
-    border-color: var(--color-gold);
+    border-color: var(--color-red);
   }
 }
 
