@@ -1,34 +1,123 @@
-<!doctype html>
+ <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>VictoryBarbershop</title>
+
+  <title>Victory Barbershop | Professional Barbers in Victoria, TX</title>
+
   <base href="/">
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <meta
+    name="description"
+    content="Victory Barbershop in Victoria, TX offers professional haircuts, skin fades, beard grooming, straight razor shaves, and premium men's grooming services. Book online with experienced barbers today."
+  >
+
+  <meta name="robots" content="index, follow">
+
+  <meta name="theme-color" content="#08090C">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Victory Barbershop">
+  
+  <meta
+    property="og:title"
+    content="Victory Barbershop | Professional Barbers in Victoria, TX"
+  >
+  
+  <meta
+    property="og:description"
+    content="Professional haircuts, fades, beard grooming, and straight razor shaves in Victoria, TX. Book your next appointment with Victory Barbershop."
+  >
+  
+  <meta
+    property="og:url"
+    content="https://victorybarberllc.com/"
+  >
+  
+  <meta
+    property="og:image"
+    content="https://victorybarberllc.com/images/victory-logo.jpeg"
+  >
+  
+  <meta
+    property="og:image:alt"
+    content="Victory Barbershop logo"
+  >
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <meta
+    name="twitter:title"
+    content="Victory Barbershop | Professional Barbers in Victoria, TX"
+  >
+  
+  <meta
+    name="twitter:description"
+    content="Professional men's grooming in Victoria, TX. Explore our services and book your next appointment."
+  >
+  
+  <meta
+    name="twitter:image"
+    content="https://victorybarberllc.com/images/victory-logo.jpeg"
+  >
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HairSalon",
+    "@id": "https://victorybarberllc.com/#business",
+    "name": "Victory Barbershop",
+    "url": "https://victorybarberllc.com/",
+    "logo": "https://victorybarberllc.com/images/victory-logo.jpeg",
+    "image": "https://victorybarberllc.com/images/victory-logo.jpeg",
+    "telephone": "+1-979-476-1540",
+    "email": "barbergenes@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1214 E Mockingbird Ln Suite A",
+      "addressLocality": "Victoria",
+      "addressRegion": "TX",
+      "postalCode": "77904",
+      "addressCountry": "US"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Victoria"
+    },
+    "sameAs": [
+      "https://www.facebook.com/victorybarbershop361",
+      "https://www.instagram.com/victorybarbershop361"
+    ]
+  }
+  </script>
+
+
 </head>
+
 <body>
   <app-root></app-root>
-  <form
-  name="barber-inquiry"
-  method="POST"
-  data-netlify="true"
-  netlify-honeypot="bot-field"
-  hidden
->
-  <input
-    type="hidden"
-    name="form-name"
-    value="barber-inquiry"
-  />
 
-  <input type="text" name="firstName" />
-  <input type="text" name="lastName" />
-  <input type="email" name="email" />
-  <input type="tel" name="phone" />
-  <select name="experience"></select>
-  <textarea name="message"></textarea>
-  <input type="text" name="bot-field" />
-</form>
+  <!-- Netlify form detection -->
+  <form
+    name="barber-inquiry"
+    method="POST"
+    data-netlify="true"
+    netlify-honeypot="bot-field"
+    hidden
+  >
+    <input type="hidden" name="form-name" value="barber-inquiry">
+
+    <input type="text" name="firstName">
+    <input type="text" name="lastName">
+    <input type="email" name="email">
+    <input type="tel" name="phone">
+    <select name="experience"></select>
+    <textarea name="message"></textarea>
+    <input type="text" name="bot-field">
+  </form>
 </body>
 </html>
